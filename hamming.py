@@ -1,10 +1,10 @@
 import random
 import math
 
-# Generates a random byte length of specified length
-def generateByteSequence(length):
-    # Create empty byte sequence
-    byteSequence = []
+# Generates a random bit length of specified length
+def generateBitsequence(length):
+    # Create empty bit sequence
+    bitSequence = []
 
     # Generate either a 1 or 0 for specified length
     for i in range(length):
@@ -12,10 +12,10 @@ def generateByteSequence(length):
         bit = round(random.random())
 
         # Append bit to byte sequence array
-        byteSequence.append(bit)
+        bitSequence.append(bit)
 
     # Return byte sequence
-    return byteSequence
+    return bitSequence
 
 # Main function
 def main():
@@ -23,7 +23,7 @@ def main():
     print("Welcome to (15, 11) Extended Hamming Code Implementation!\n")
 
     # Generate byte sequence
-    data = generateByteSequence(256)
+    data = generateBitsequence(256)
 
     print(data)
 
