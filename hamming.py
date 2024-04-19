@@ -3,6 +3,7 @@ import math
 
 # Generates a random bit length of specified length
 def generateBitsequence(length):
+
     # Create empty bit sequence
     bitSequence = []
 
@@ -17,15 +18,27 @@ def generateBitsequence(length):
     # Return byte sequence
     return bitSequence
 
+# Create 16 bit blocks of the data with parity bits
+def createParityBlocks(bitSeq):
+
+    # Create array of 16 bit blocks
+    blockArr = []
+
+    # Return array of parity blocks
+    return blockArr
+
+
 # Main function
 def main():
+
     # Print welcome message
     print("Welcome to (15, 11) Extended Hamming Code Implementation!\n")
 
     # Generate byte sequence
     data = generateBitsequence(256)
 
-    print(data)
+    # Create Parity blocks
+    blockArr = createParityBlocks(data)
 
 if __name__ == "__main__":
     main()
