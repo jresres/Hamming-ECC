@@ -18,11 +18,18 @@ def generateBitsequence(length):
     # Return byte sequence
     return bitSequence
 
-# Create 16 bit blocks of the data with parity bits
-def createParityBlocks(bitSeq):
+# Create 16 bit blocks
+def spliceBitSequence(bitSeq):
 
     # Create array of 16 bit blocks
     blockArr = []
+
+    # Create counts to hold parity bits
+    parity1 = 0
+    parity2 = 0
+    parity4 = 0
+    parity8 = 0
+    
 
     # Return array of parity blocks
     return blockArr
@@ -38,7 +45,7 @@ def main():
     data = generateBitsequence(256)
 
     # Create Parity blocks
-    blockArr = createParityBlocks(data)
+    blockArr = spliceBitSequence(data)
 
     print(blockArr)
 
