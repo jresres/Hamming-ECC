@@ -40,5 +40,7 @@ def main():
     # Create Parity blocks
     blockArr = createParityBlocks(data)
 
+    print(blockArr)
+
 if __name__ == "__main__":
     main()
