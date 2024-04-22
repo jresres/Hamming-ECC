@@ -1,6 +1,21 @@
 import random
 import math
 
+# Function to calculate even parity bit
+# Need even number of 1s
+def generateParityBit(bitArr):
+
+    # Count to determine even or odd
+    count = 0
+
+    # Loop through bit array to calculate parity for
+    for bit in bitArr:
+    
+        # Add bit value to count
+        count += bit
+    
+    return (count % 2)
+
 # Generates a random bit length of specified length
 def generateBitsequence(length):
 
@@ -19,6 +34,10 @@ def generateBitsequence(length):
     return bitSequence
 
 # Create 16 bit blocks
+#  -  -  -  0 
+#  -  1  2  3
+#  -  4  5  6 
+#  7  8  9  10
 def spliceBitSequence(bitSeq):
 
     # Create array of 16 bit blocks
@@ -30,6 +49,10 @@ def spliceBitSequence(bitSeq):
     parity4 = 0
     parity8 = 0
     
+    # Loop through 11 bits of data blocks
+    for bit in range(0, int(len(bitSeq) / 11) + 1):
+
+        print(bit)
 
     # Return array of parity blocks
     return blockArr
@@ -37,12 +60,15 @@ def spliceBitSequence(bitSeq):
 
 # Main function
 def main():
+    
+    # Create length macro
+    LENGTH = 256
 
     # Print welcome message
     print("Welcome to (15, 11) Extended Hamming Code Implementation!\n")
 
     # Generate byte sequence
-    data = generateBitsequence(256)
+    data = generateBitsequence(LENGTH)
 
     # Create Parity blocks
     blockArr = spliceBitSequence(data)
