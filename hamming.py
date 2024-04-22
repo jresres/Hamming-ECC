@@ -48,6 +48,9 @@ def spliceBitSequence(bitSeq):
     parity2 = 0
     parity4 = 0
     parity8 = 0
+
+    # Bit sequence index counter
+    sequence_idx = 0
     
     # Loop through 11 bits of data blocks
     for bit in range(0, int(len(bitSeq) / 11) + 1):
